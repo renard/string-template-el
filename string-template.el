@@ -4,7 +4,7 @@
 
 ;; Author: Sebastien Gross <seb•ɑƬ•chezwam•ɖɵʈ•org>
 ;; Keywords: emacs, string, functionality
-;; Last changed: 2010-08-11 17:40:41
+;; Last changed: 2010-11-23 10:34:47
 
 ;; This file is NOT part of GNU Emacs.
 
@@ -33,10 +33,12 @@
 (defcustom string-template-start-delimiter "${"
   "Default value for placeholder start delimiter in `string-template'."
   :type 'string)
+(make-variable-buffer-local 'string-template-start-delimiter)
 
 (defcustom string-template-end-delimiter "}"
   "Default value for placeholder end delimiter in `string-template'."
   :type 'string)
+(make-variable-buffer-local 'string-template-end-delimiter)
 
 ;;;###autoload
 (defun string-template (string values &optional start-delimiter end-delimiter)
